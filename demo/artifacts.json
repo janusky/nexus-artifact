@@ -1,0 +1,17 @@
+{
+  "artifacts": [
+    {
+      "url": "https://localhost:8443/repository/demo-raw/nexus-artifact/1.0.0/nexus-artifact",
+      "file": "./nexus-artifact"
+    },
+    {
+      "url": "https://localhost:8443/repository/demo-raw/nexus-artifact/1.0.0/nexus-artifact.md5",
+      "file": "./nexus-artifact.md5"
+    },
+    {
+      "url": "https://localhost:8443/repository/demo-raw/nexus-artifact/1.0.0/nexus-artifact.sha1",
+      "file": "./nexus-artifact.sha1",
+      "contenttype": "text/plain"
+    }
+  ]
+}
