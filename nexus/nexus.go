@@ -8,7 +8,6 @@ import (
 	"net/http"
 	"os"
 	"runtime"
-	"time"
 
 	"github.com/apex/log"
 )
@@ -90,7 +89,7 @@ func (session *Session) PutArtifact(artifact Artifact) error {
 	defer response.Body.Close()
 
 	if response.StatusCode != http.StatusCreated {
-		return fmt.Errorf("fail PUT status '%s'", response.Status)
+		return fmt.Errorf("fail PUT %s status '%s'", artifact.File, response.Status)
 	} else {
 		log.Infof("uploaded successful %s", artifact.File)
 	}
@@ -131,9 +130,9 @@ func (session *Session) GetArtifact(artifact Artifact) error {
 
 	if response.StatusCode != http.StatusOK {
 		// log.Debugf("Fail GET '%s'", response.Status)
-		return fmt.Errorf("Fail GET status '%s'", response.Status)
+		return fmt.Errorf("Fail GET %s status '%s'", artifact.File, response.Status)
 	} else {
-		log.Infof("get successful - ContentLength %d", response.ContentLength)
+		log.Infof("get successful %s - ContentLength %d", artifact.File, response.ContentLength)
 	}
 
 	return nil

@@ -6,9 +6,24 @@ Application to perform PUT and GET of artifacts in Nexus repository.
 
 Run upload and get of artifacts in Nexus repository.
 
+## Build
+
+Build application executable
+
+```sh
+# Build
+go build -ldflags "-X 'main.version=dev' -X 'main.date=$(date '+%Y%m%d%H%M')' -X 'main.commit=$(git rev-parse HEAD)'"
+
+# Show version
+./nexus-artifact -v
+```
+
 ## Run
 
 There should be a [file list](demo/DEMO.md#create-files-to-work), which represent the artifacts that you want to recover or upload.
+
+> NOTE: You must have an application executable.
+> * [Build App](#build)
 
 ```sh
 # GET
