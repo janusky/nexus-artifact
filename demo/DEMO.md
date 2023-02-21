@@ -17,7 +17,7 @@ There should be a [file list](#create-files-to-work), which represent the artifa
 >```
 >Solve
 >```sh
-export GODEBUG=x509ignoreCN=0
+>export GODEBUG=x509ignoreCN=0
 >```
 
 ```sh
